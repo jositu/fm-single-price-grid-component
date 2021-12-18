@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Karla', sans-serif;
     background-color: hsl(204, 43%, 93%);
@@ -7,31 +11,50 @@ body {
     max-width: 100vw;
 }
 
-h2 {
-    color: hsl(179, 62%, 43%);
-    font-size: 20px;
+#main {
+    box-shadow: 0px 0px 20px hsl(204, 29%, 80%);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0px;
+    display: grid;
+    grid-gap: 0px;
+}
+
+.grid-item {
     margin: 0px;
+    padding: 24px;
+}
+
+#join-box {
+    background-color: hsl(0, 0%, 100%);
+}
+
+#join-box h2 {
+    color: hsl(179, 62%, 43%);
+    font-size: 1.2rem;
+}
+
+#join-box h4 {
+    color: hsl(71, 73%, 54%);
+    font-size: 0.95rem;
+    line-height: 20px;
+}
+
+#join-box p {
+    color: hsl(218, 22%, 67%);
+    font-weight: 400;
+    font-size: 0.87rem;
+    line-height: 26px;
 }
 
 h3 {
     color: hsl(0, 0%, 100%);
-    font-size: 20px;
-    margin: 0px;
+    font-size: 1.1rem;
+    margin: 0px 0px 20px;
 }
 
-h4 {
-    color: hsl(71, 73%, 54%);
-    font-size: 15px;
-    line-height: 20px;
-    margin: 0px;
-}
-
-p {
-    font-weight: 400;
-    color: hsl(204, 43%, 93%);
-    font-size: 14px;
-    line-height: 26px;
-    margin: 0px;
+#subs-box {
+    background-color: hsl(179, 62%, 43%);
 }
 
 #price {
@@ -40,59 +63,41 @@ p {
     align-items: center;
 }
 
-#emph {
+#price span {
     color: hsl(0, 0%, 100%);
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 700;
+    padding-right: 12px;
 }
 
-#main {
-    display: grid;
-    grid-gap: 0px;
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 0px;
-    box-shadow: 0px 0px 20px hsl(204, 29%, 80%);
-}
-
-.grid-item {
-    margin: 0px;
-    padding: 25px;
-}
-
-#join-box {
-    background-color: hsl(0, 0%, 100%);
-}
-
-#join-box p {
-    color: hsl(218, 22%, 67%);
-}
-
-#subs-box {
-    background-color: hsl(179, 62%, 43%);
-}
-
-#subs-box > h4 {
-    color:hsl(0, 0%, 100%);
+#price h4 {
+    color: hsl(204, 43%, 93%);
     font-weight: 400;
-    font-size: 14px;
+    margin: 0px;
+}
+
+#subs-box>h4 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin: 5px 0px;
 }
 
 button {
     font-family: 'Karla', sans-serif;
-    font-size: 15px;
+    font-size: 0.95rem;
     font-weight: 700;
     background-color: hsl(71, 73%, 54%);
     border-radius: 5px;
     border: 0px;
     width: 100%;
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 20px hsla(179, 71%, 31%, 0.719);
+    min-height: 50px;
+    margin-top: 30px;
 }
 
-#sign-up-button {
-    color: hsl(0, 0%, 100%);
-    box-shadow: 0px 0px 20px hsl(179, 71%, 31%);
-    min-height: 50px;
-}
+
 
 #why-box {
     background-color: hsl(179, 48%, 50%);
@@ -112,6 +117,7 @@ li {
 }
 
 .attribution {
+    color: hsl(179, 71%, 31%);
     font-size: 11px;
     text-align: center;
 }
@@ -120,11 +126,11 @@ li {
     color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 576px) {
     h2 {
         font-size: 24px;
     }
-    
+
     h4 {
         font-size: 18px;
         line-height: normal;
@@ -148,18 +154,18 @@ li {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    
+
     #subs-box {
         grid-column-start: 1;
         grid-column-end: 2;
     }
 
-    #subs-box > h4 {
-        color:hsl(0, 0%, 100%);
+    #subs-box>h4 {
+        color: hsl(0, 0%, 100%);
         font-weight: 400;
         font-size: 14px;
     }
-    
+
     #why-box {
         grid-column-start: 2;
         grid-column-end: 3;
