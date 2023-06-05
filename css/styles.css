@@ -1,0 +1,196 @@
+@import url('normalize.css');
+
+:root {
+  --color-primary: hsl(179, 62%, 43%);
+  --color-accent: hsl(71, 73%, 54%);
+  --color-bg: hsl(204, 43%, 93%);
+  --color-body: hsl(218, 22%, 67%);
+  --font-size: 16px;
+  --font-family: 'Karla', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-body);
+  line-height: 1.8;
+  font-size: var(--font-size);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+h2 {
+  color: var(--color-bg);
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.component {
+  border-radius: 5px;
+  box-shadow: 0 10px 30px hsla(217, 22%, 67%, 0.435);
+  display: grid;
+  grid-template-rows: auto repeat(2, 1fr);
+  margin: 4.5rem 2rem;
+  max-width: 720px;
+  overflow: hidden;
+}
+
+.section {
+  padding: 1.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: space-between; */
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  h2 {
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.12rem;
+  }
+
+  .component {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 2.5rem;
+  }
+}
+
+/* Main Section */
+
+.section--main {
+  background-color: white;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.subtitle {
+  color: var(--color-accent);
+  line-height: 1.15;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .section--main {
+    grid-column: 1 / 3;
+  }
+
+  .subtitle {
+    color: var(--color-accent);
+    line-height: 1.15;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+/* Subscription Section */
+
+.section--subscription {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.time-period {
+  font-weight: 300;
+}
+
+/* Why Us Section */
+
+.section--why {
+  background-color: hsl(179, 47%, 51%);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  color: var(--color-bg);
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Button */
+
+.btn {
+  background-color: var(--color-accent);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 5px 20px hsla(179, 63%, 33%, 0.6);
+  color: white;
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 700;
+  line-height: 1;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
